@@ -1,0 +1,32 @@
+
+PASCAL - TÌM ƯỚC CHUNG LỚN NHẤT - BỘI CHUNG NHỎ NHẤT
+
+program Tim_UCLN_BCNN;
+   uses crt;
+   var x,y,UCLN,BCNN:integer;
+begin
+   clrscr;
+
+   write('Nhap so X : ');
+   read(x);
+   write('Nhap so Y : ');
+   read(y);
+
+   BCNN:=x*y;       // Buoc 1 cua BCNN la nhan 2 so X va Y voi nhau
+
+   while x<>y do    // Chay vong lap cho den khi X = Y
+   begin
+      if x > y then // Neu X khac Y
+         x:=x-y     // Thi X = X - Y
+      else
+         y:=y-x;    // Nguoc lai Thi Y = Y - X
+   end;
+
+   UCLN:=x;  // Sau khi chay Vong lap xong Thi UCLN la X
+   BCNN:=BCNN div UCLN;  // Buoc 2 cua BCNN la lay BCNN da co o Tren chia lay so Nguyen voi UCLN
+
+   writeln('UCLN la : ',UCLN);
+   writeln('BCNN la : ',BCNN);
+
+   readln;
+end.
