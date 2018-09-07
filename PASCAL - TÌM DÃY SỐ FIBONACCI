@@ -1,0 +1,20 @@
+
+PASCAL - TÌM DÃY SỐ FIBONACCI
+
+program Day_So_Fibonacci;
+uses crt;
+var i,n: integer;
+
+function Fib(n:integer): integer;
+begin
+  if(n=1) or (n=0) then Fib:=n
+  else Fib:=Fib(n-1)+Fib(n-2);
+end;
+
+begin
+clrscr;
+write('Ban hay nhap So Nguyen Duong N: ');
+readln(n);
+write('Fibonacci cua N la ',Fib(n));
+readln;
+end.
