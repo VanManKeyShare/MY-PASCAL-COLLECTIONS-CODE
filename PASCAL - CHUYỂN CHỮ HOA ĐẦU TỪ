@@ -36,3 +36,4 @@ begin
 	writeln(chuoi_out);
 	readln;
 end.
+
